@@ -1,0 +1,17 @@
+create table Department(
+DepartmentId int not null,
+DepartmentName varchar(200));
+
+
+create table Employee(
+EmployeeID int not null,
+EmployeeName varchar(100) null,
+Department varchar(100) null,
+DateOfJoining date,null,
+PhotoFileName varchar(100) null);
+
+create table feed(
+fname varchar(100) null,
+lname varchar(100) null,
+country varchar(100) null,
+subject varchar(500) null)

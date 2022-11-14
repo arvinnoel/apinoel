@@ -1,0 +1,63 @@
+create table products(pid int,
+pname varchar(50),
+price varchar(50),
+image varbinary(max)
+
+
+
+insert into products values('3','Iphone','9888','abcc')
+insert into products values(4,'Nokia','9888',(select * from 'C:\Users\admin\Pictures\Untitled.png'))
+insert into products values('5','Vivo','9888','abcc')
+insert into products values('6','Asus','9888','abcc')
+insert into products values('7','OnePlus','9888','abcc')
+insert into products values('8','MicroMax','9888','abcc')
+insert into products values('9','Oppo','9888','abcc')
+
+
+insert into products(image) 
+SELECT BulkColumn 
+FROM Openrowset( Bulk 'C:\Users\admin\Pictures\Untitled.png', Single_Blob) as img
+
+drop table products
+
+select * from products
+
+insert into products where pid='' values ('1','Realmi','7888','C:\Users\admin\Pictures\Untitled.png')
+
+
+select * from Employee
+  
+insert into products values(2,'Redmi','9888',( select * from Openrowset (BULK 'C:\Users\admin\Documents\AddEmployee\Angular10WebAPITut-master\ui\angular10\src\assets\images\Sam.JPG', Single_Blob) as T1))
+
+delete from productscreate table products(pid int,
+pname varchar(50),
+price varchar(50),
+image varbinary(max)
+
+
+
+insert into products values('3','Iphone','9888','abcc')
+insert into products values(4,'Nokia','9888',(select * from 'C:\Users\admin\Pictures\Untitled.png'))
+insert into products values('5','Vivo','9888','abcc')
+insert into products values('6','Asus','9888','abcc')
+insert into products values('7','OnePlus','9888','abcc')
+insert into products values('8','MicroMax','9888','abcc')
+insert into products values('9','Oppo','9888','abcc')
+
+
+insert into products(image) 
+SELECT BulkColumn 
+FROM Openrowset( Bulk 'C:\Users\admin\Pictures\Untitled.png', Single_Blob) as img
+
+drop table products
+
+select * from products
+
+insert into products where pid='' values ('1','Realmi','7888','C:\Users\admin\Pictures\Untitled.png')
+
+
+select * from Employee
+  
+insert into products values(2,'Redmi','9888',( select * from Openrowset (BULK 'C:\Users\admin\Documents\AddEmployee\Angular10WebAPITut-master\ui\angular10\src\assets\images\Sam.JPG', Single_Blob) as T1))
+
+delete from products
